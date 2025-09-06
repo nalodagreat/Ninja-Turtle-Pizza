@@ -37,16 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ckb1 = new System.Windows.Forms.CheckBox();
             this.ckB2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            
             this.ckB4 = new System.Windows.Forms.CheckBox();
             this.ckB5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rb9 = new System.Windows.Forms.RadioButton();
+            this.rb8 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.rb7 = new System.Windows.Forms.RadioButton();
+            this.rb10 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -158,15 +158,8 @@
             this.ckB2.Text = "mushroom";
             this.ckB2.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(-11, 531);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(113, 24);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+         
+           
             // 
             // ckB4
             // 
@@ -187,84 +180,75 @@
             this.ckB5.TabIndex = 8;
             this.ckB5.Text = "tonno";
             this.ckB5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(251, 530);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(113, 24);
-            this.checkBox6.TabIndex = 9;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Red;
-            this.groupBox1.Controls.Add(this.radioButton9);
-            this.groupBox1.Controls.Add(this.radioButton8);
+            this.groupBox1.Controls.Add(this.rb9);
+            this.groupBox1.Controls.Add(this.rb8);
             this.groupBox1.Location = new System.Drawing.Point(24, 298);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(307, 97);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Size";
+            this.groupBox1.Text = "Crust Type";
             // 
-            // radioButton9
+            // rb9
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 67);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(126, 24);
-            this.radioButton9.TabIndex = 3;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "radioButton9";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rb9.AutoSize = true;
+            this.rb9.Location = new System.Drawing.Point(6, 67);
+            this.rb9.Name = "rb9";
+            this.rb9.Size = new System.Drawing.Size(68, 24);
+            this.rb9.TabIndex = 3;
+            this.rb9.TabStop = true;
+            this.rb9.Text = "think";
+            this.rb9.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rb8
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 29);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(126, 24);
-            this.radioButton8.TabIndex = 4;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "radioButton8";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rb8.AutoSize = true;
+            this.rb8.Location = new System.Drawing.Point(6, 29);
+            this.rb8.Name = "rb8";
+            this.rb8.Size = new System.Drawing.Size(60, 24);
+            this.rb8.TabIndex = 4;
+            this.rb8.TabStop = true;
+            this.rb8.Text = "thin";
+            this.rb8.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Red;
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton10);
+            this.groupBox2.Controls.Add(this.rb7);
+            this.groupBox2.Controls.Add(this.rb10);
             this.groupBox2.Location = new System.Drawing.Point(429, 298);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(438, 97);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Size";
+            this.groupBox2.Text = "Where To Eat";
             // 
-            // radioButton7
+            // rb7
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(292, 29);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(126, 24);
-            this.radioButton7.TabIndex = 3;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "radioButton7";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rb7.AutoSize = true;
+            this.rb7.Location = new System.Drawing.Point(292, 29);
+            this.rb7.Name = "rb7";
+            this.rb7.Size = new System.Drawing.Size(81, 24);
+            this.rb7.TabIndex = 3;
+            this.rb7.TabStop = true;
+            this.rb7.Text = "take in";
+            this.rb7.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rb10
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 29);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(135, 24);
-            this.radioButton10.TabIndex = 4;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "radioButton10";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rb10.AutoSize = true;
+            this.rb10.Location = new System.Drawing.Point(6, 29);
+            this.rb10.Name = "rb10";
+            this.rb10.Size = new System.Drawing.Size(88, 24);
+            this.rb10.TabIndex = 4;
+            this.rb10.TabStop = true;
+            this.rb10.Text = "in place";
+            this.rb10.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -347,8 +331,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox3);
+            
+          
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gb2);
             this.Controls.Add(this.gb1);
@@ -380,19 +364,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox ckb1;
         private System.Windows.Forms.CheckBox ckB2;
-        private System.Windows.Forms.CheckBox checkBox3;
+       
         private System.Windows.Forms.CheckBox ckB4;
         private System.Windows.Forms.CheckBox ckB5;
-        private System.Windows.Forms.CheckBox checkBox6;
+       
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rb9;
+        private System.Windows.Forms.RadioButton rb8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton rb10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton rb7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox ckB3;
         private System.Windows.Forms.CheckBox ckB6;
