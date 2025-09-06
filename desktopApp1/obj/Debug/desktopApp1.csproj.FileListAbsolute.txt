@@ -1,0 +1,11 @@
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\bin\Debug\desktopApp1.exe.config
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\bin\Debug\desktopApp1.exe
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\bin\Debug\desktopApp1.pdb
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.csproj.AssemblyReference.cache
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.Form1.resources
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.Properties.Resources.resources
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.csproj.GenerateResource.cache
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.exe
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.pdb
+C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\obj\Debug\desktopApp1.exe.config
