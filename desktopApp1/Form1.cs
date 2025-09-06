@@ -18,11 +18,12 @@ namespace desktopApp1
         {
             InitializeComponent();
         }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
-                // img
-               
+            this.BackgroundImage = Image.FromFile(@"C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\which-pizza-toppings-do-you-think-each-of-the-turtles-would-v0-pwnipxsez97c1.jpg");
+            // Adatta l'immagine alla form
         }
 
         private void label1_Click(object sender, EventArgs e)
