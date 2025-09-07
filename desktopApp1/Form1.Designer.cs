@@ -37,10 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ckb1 = new System.Windows.Forms.CheckBox();
             this.ckB2 = new System.Windows.Forms.CheckBox();
-            
             this.ckB4 = new System.Windows.Forms.CheckBox();
             this.ckB5 = new System.Windows.Forms.CheckBox();
-            
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rb9 = new System.Windows.Forms.RadioButton();
             this.rb8 = new System.Windows.Forms.RadioButton();
@@ -147,6 +145,7 @@
             this.ckb1.TabIndex = 4;
             this.ckb1.Text = "extra cheese";
             this.ckb1.UseVisualStyleBackColor = true;
+            this.ckb1.CheckedChanged += new System.EventHandler(this.ckb1_CheckedChanged);
             // 
             // ckB2
             // 
@@ -157,9 +156,7 @@
             this.ckB2.TabIndex = 5;
             this.ckB2.Text = "mushroom";
             this.ckB2.UseVisualStyleBackColor = true;
-            // 
-         
-           
+            this.ckB2.CheckedChanged += new System.EventHandler(this.ckB2_CheckedChanged);
             // 
             // ckB4
             // 
@@ -170,6 +167,7 @@
             this.ckB4.TabIndex = 7;
             this.ckB4.Text = "olives";
             this.ckB4.UseVisualStyleBackColor = true;
+            this.ckB4.CheckedChanged += new System.EventHandler(this.ckB4_CheckedChanged);
             // 
             // ckB5
             // 
@@ -180,7 +178,7 @@
             this.ckB5.TabIndex = 8;
             this.ckB5.Text = "tonno";
             this.ckB5.UseVisualStyleBackColor = true;
-            
+            this.ckB5.CheckedChanged += new System.EventHandler(this.ckB5_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -204,6 +202,7 @@
             this.rb9.TabStop = true;
             this.rb9.Text = "think";
             this.rb9.UseVisualStyleBackColor = true;
+            this.rb9.CheckedChanged += new System.EventHandler(this.rb9_CheckedChanged);
             // 
             // rb8
             // 
@@ -311,6 +310,7 @@
             this.ckB3.TabIndex = 9;
             this.ckB3.Text = "tomatoos";
             this.ckB3.UseVisualStyleBackColor = true;
+            this.ckB3.CheckedChanged += new System.EventHandler(this.ckB3_CheckedChanged);
             // 
             // ckB6
             // 
@@ -321,6 +321,7 @@
             this.ckB6.TabIndex = 10;
             this.ckB6.Text = "pepperoni";
             this.ckB6.UseVisualStyleBackColor = true;
+            this.ckB6.CheckedChanged += new System.EventHandler(this.ckB6_CheckedChanged);
             // 
             // Form1
             // 
@@ -331,8 +332,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            
-          
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gb2);
             this.Controls.Add(this.gb1);
