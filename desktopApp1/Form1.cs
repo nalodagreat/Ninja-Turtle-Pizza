@@ -28,17 +28,45 @@ namespace desktopApp1
         public Form1()
         {
             InitializeComponent();
-            rb8.Checked = true;
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackgroundImage = Image.FromFile(@"C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\which-pizza-toppings-do-you-think-each-of-the-turtles-would-v0-pwnipxsez97c1.jpg");
+            rb8.Checked = true;
         }
 
         private void label1_Click(object sender, EventArgs e) { }
 
-        private void button1_Click(object sender, EventArgs e) { }
+        private void button1_Click(object sender, EventArgs e) 
+        {
+            MessageBox.Show("u saved us from splenter!", "Mission Completed",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            rdb1.Enabled = false;
+            rdb2.Enabled = false;
+            rdb3.Enabled = false;
+            ckb1.Enabled=false;
+            ckB2.Enabled=false;
+            ckB3.Enabled=false;
+            ckB4.Enabled=false;
+            ckB5.Enabled=false;
+            ckB6.Enabled=false;
+            rb9.Enabled=false;
+            rb10.Enabled=false;
+            rb7.Enabled=false;
+            rb8.Enabled = false;
+            rb8.Enabled = false;
+            rb8.Enabled = false;
+            button1.Enabled = false;
+            button1.BackColor = Color.Silver;
+            gb1.BackColor = Color.Silver;
+            gb2.BackColor = Color.Silver;
+            groupBox1.BackColor = Color.Silver;
+            groupBox2.BackColor = Color.Silver;
+            groupBox3.BackColor = Color.Silver;
+
+
+        }
 
         private void updatePrice(enType size)
         {
