@@ -28,6 +28,7 @@ namespace desktopApp1
         public Form1()
         {
             InitializeComponent();
+            rb8.Checked = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace desktopApp1
         {
             if (rb9.Checked)
             {
+                label11.Text = rb9.Text;
                 price += 5;
                 label3.Text = price.ToString() + "$";
             }
@@ -180,6 +182,19 @@ namespace desktopApp1
                 label9.Text = rb7.Text;
             }
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rb8_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rb8.Checked)
+            {
+                label11.Text=rb8.Text;
+            }
         }
     }
 }
