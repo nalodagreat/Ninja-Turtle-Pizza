@@ -116,7 +116,8 @@ namespace desktopApp1
                 formatted += arr[i];
                 if ((i + 1) % 2 == 0 && i != arr.Length - 1)
                     formatted += "\n";
-              
+                else if (i != arr.Length - 1)
+                    formatted += ",";
             }
 
             label8.Text = formatted;
@@ -162,6 +163,23 @@ namespace desktopApp1
             price += ckB6.Checked ? 1 : -1;
             label3.Text = price.ToString() + "$";
             updateToppings();
+        }
+
+        private void rb10_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rb10.Checked)
+            {
+                label9.Text=rb10.Text;
+            }
+        }
+
+        private void rb7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb7.Checked)
+            {
+                label9.Text = rb7.Text;
+            }
+
         }
     }
 }
