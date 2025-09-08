@@ -41,7 +41,7 @@ namespace desktopApp1
 
         private void button1_Click(object sender, EventArgs e) 
         {
-            MessageBox.Show("u saved us from splenter!", "Mission Completed",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("u saved us from shreddder!", "Mission Completed",MessageBoxButtons.OK,MessageBoxIcon.Information);
             rdb1.Enabled = false;
             rdb2.Enabled = false;
             rdb3.Enabled = false;
@@ -64,7 +64,7 @@ namespace desktopApp1
             groupBox1.BackColor = Color.Silver;
             groupBox2.BackColor = Color.Silver;
             groupBox3.BackColor = Color.Silver;
-
+            //button2.Focus();
 
         }
 
@@ -223,6 +223,51 @@ namespace desktopApp1
             {
                 label11.Text=rb8.Text;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            rdb1.Checked = true;
+            rb8.Checked = true;
+
+            rdb1.Enabled =true;
+            rdb2.Enabled = true;
+            rdb3.Enabled = true;
+            ckB2.Enabled=true;
+            ckB3.Enabled=true;
+            ckB4.Enabled=true;
+            ckB5.Enabled=true;
+            ckB6.Enabled=true;
+            rb9.Enabled= true;
+            rb10.Enabled=true;
+            rb7.Enabled= true;
+            
+            ckb1.Enabled = true;
+            rb8.Enabled =true;
+           
+            button1.Enabled = true;
+
+            //
+           
+            rdb2.Checked= false;
+            rdb3.Checked= false;
+            ckB2.Checked= false;
+            ckB3.Checked= false;
+            ckB4.Checked= false;
+            ckB5.Checked= false;
+            ckB6.Checked= false;
+            rb9. Checked= false;
+            rb10.Checked= false;
+            rb7. Checked= false;
+            ckb1.Checked= false;
+            button1.Enabled = true;
+            button1.BackColor = Color.Black;
+            gb1.BackColor = Color.Red;
+            gb2.BackColor = Color.Red;
+            groupBox1.BackColor = Color.Red;
+            groupBox2.BackColor = Color.Red;
+            groupBox3.BackColor = Color.Red;
         }
     }
 }
