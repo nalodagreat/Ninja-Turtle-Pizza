@@ -245,9 +245,8 @@ namespace desktopApp1
             
             ckb1.Enabled = true;
             rb8.Enabled =true;
-           
             button1.Enabled = true;
-            //
+           
            
             rdb2.Checked= false;
             rdb3.Checked= false;
