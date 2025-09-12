@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -13,10 +10,12 @@ namespace desktopApp1
         {
             InitializeComponent();
         }
-
+        void UpdateTotalPrice()
+        {
+            //update price will be here
+        }
         void UpdateSize()
         {
-
             UpdateTotalPrice();
 
             if (rbSamll.Checked)
@@ -36,12 +35,9 @@ namespace desktopApp1
                 lblSize.Text = "Large";
                 return;
             }
-
         }
-
         void UpdateToppings()
         {
-
             UpdateTotalPrice();
 
             string sToppings = "";
@@ -50,7 +46,6 @@ namespace desktopApp1
             {
                 sToppings = "Extra Chees";
             }
-
 
             if (chkOnion.Checked)
             {
@@ -86,268 +81,6 @@ namespace desktopApp1
                 sToppings = "No Toppings";
 
             lblToppings.Text = sToppings;
-
-
-        }
-
-        void UpdateCrust()
-        {
-            UpdateTotalPrice();
-            if (rbThinCrust.Checked)
-            {
-                lblCrustType.Text = "Think Crust";
-                return;
-            }
-
-            if (rbThickCrust.Checked)
-            {
-                lblCrustType.Text = "Thick Crust";
-                return;
-            }
-
-
-        }
-
-        void UpdateWhereToEat()
-        {
-            UpdateTotalPrice();
-
-            if (rbEatIn.Checked)
-            {
-                lblWhereToEat.Text = "Eat In.";
-                return;
-            }
-
-            if (rbTakeOut.Checked)
-            {
-                lblWhereToEat.Text = "Take Out.";
-                return;
-            }
-
-        }
-
-        float GetSelectedSizePrice()
-        {
-            if (rbSamll.Checked)
-
-                return Convert.ToSingle(rbSamll.Tag);
-
-            else if (rbMedium.Checked)
-
-                return Convert.ToSingle(rbMedium.Tag);
-
-            else
-                return Convert.ToSingle(rbLarge.Tag);
-
-        }
-
-        float CalculateToppingsPrice()
-        {
-
-
-            float ToppingsTotalPrice = 0;
-
-            if (chkExtraChees.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkExtraChees.Tag);
-            }
-
-
-            if (chkOnion.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkOnion.Tag);
-            }
-
-            if (chkMushrooms.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkMushrooms.Tag);
-            }
-
-            if (chkOlives.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkOlives.Tag);
-            }
-
-            if (chkTomatos.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkTomatos.Tag);
-            }
-
-            if (chkGreenPeppers.Checked)
-            {
-                ToppingsTotalPrice += Convert.ToSingle(chkTomatos.Tag);
-            }
-
-
-
-            return ToppingsTotalPrice;
-
-
-
-        }
-
-        float GetSelectedCrutPrice()
-        {
-            if (rbThinCrust.Checked)
-
-                return Convert.ToSingle(rbThinCrust.Tag);
-
-            else
-                return Convert.ToSingle(rbThickCrust.Tag);
-
-        }
-
-        float CalculateTotalPrice()
-        {
-            return GetSelectedSizePrice() + CalculateToppingsPrice() + GetSelectedCrutPrice();
-        }
-
-        void UpdateTotalPrice()
-        {
-
-            lblTotalPrice.Text = "$" + CalculateTotalPrice().ToString();
-
-        }
-
-        void UpdateOrderSummary()
-        {
-            UpdateSize();
-            UpdateToppings();
-            UpdateCrust();
-            UpdateWhereToEat();
-            UpdateTotalPrice();
-
-        }
-
-        void ResetForm()
-        {
-
-            //reset Groups
-            gbSize.Enabled = true;
-            gbToppings.Enabled = true;
-            gbCrustType.Enabled = true;
-            gbWhereToEat.Enabled = true;
-
-            //reset Size
-            rbMedium.Checked = true;
-
-            //reset Toppings.
-            chkExtraChees.Checked = false;
-            chkOnion.Checked = false;
-            chkMushrooms.Checked = false;
-            chkOlives.Checked = false;
-            chkTomatos.Checked = false;
-            chkGreenPeppers.Checked = false;
-
-            //reset CrustType
-            rbThinCrust.Checked = true;
-
-            //reset Where to Eat
-            rbEatIn.Checked = true;
-
-            //Reset Order Button
-            btnOrderPizza.Enabled = true;
-
-        }
-
-        private void btnOrderPizza_Click(object sender, EventArgs e)
-        {
-
-            if (MessageBox.Show("Do You Want To Complete This Mission?", "Complete?",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                MessageBox.Show("U've saved us from Shredder", "Mission Complete!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                btnOrderPizza.Enabled = false;
-                gbSize.Enabled = false;
-                gbToppings.Enabled = false;
-                gbCrustType.Enabled = false;
-                gbWhereToEat.Enabled = false;
-
-            }
-            else
-
-                MessageBox.Show("Update your order", "Update",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
-
-        private void rbMedium_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateSize();
-        }
-
-        private void rbLarge_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateSize();
-        }
-
-        private void rbSamll_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateSize();
-        }
-
-        private void chkExtraChees_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void chkOnion_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void chkMushrooms_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void chkOlives_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void chkTomatos_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void chckGreenPeppers_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateToppings();
-        }
-
-        private void rbThinCrust_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateCrust();
-        }
-
-        private void rbThickCrust_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateCrust();
-        }
-
-        private void rbEatIn_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateWhereToEat();
-        }
-
-        private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateWhereToEat();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            UpdateOrderSummary();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\which-pizza-toppings-do-you-think-each-of-the-turtles-would-v0-pwnipxsez97c1.jpg");
-
-        }
-
-        private void btnResetForm_Click(object sender, EventArgs e)
-        {
-            ResetForm();
         }
     }
-
 }
