@@ -119,7 +119,7 @@ namespace desktopApp1
                 return;
             }
         }
-       float GetSelectedSizePrice()
+        float GetSelectedSizePrice()
         { return 0; }
         float CalculateToppingsPrice()
         { return 0; }
@@ -170,5 +170,48 @@ namespace desktopApp1
             btnOrderPizza.Enabled = true;
         }
 
+    
+        private void btnOrderPizza_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do You Want To Complete This Mission?", "Complete?",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                MessageBox.Show("U've saved us from Shredder", "Mission Complete!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                btnOrderPizza.Enabled = false;
+                gbSize.Enabled = false;
+                gbToppings.Enabled = false;
+                gbCrustType.Enabled = false;
+                gbWhereToEat.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Update your order", "Update",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void rbMedium_CheckedChanged(object sender, EventArgs e) { UpdateSize(); }
+        private void rbLarge_CheckedChanged(object sender, EventArgs e) { UpdateSize(); }
+        private void rbSamll_CheckedChanged(object sender, EventArgs e) { UpdateSize(); }
+
+        private void chkExtraChees_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+        private void chkOnion_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+        private void chkMushrooms_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+        private void chkOlives_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+        private void chkTomatos_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+        private void chckGreenPeppers_CheckedChanged(object sender, EventArgs e) { UpdateToppings(); }
+
+        private void rbThinCrust_CheckedChanged(object sender, EventArgs e) { UpdateCrust(); }
+        private void rbThickCrust_CheckedChanged(object sender, EventArgs e) { UpdateCrust(); }
+
+        private void rbEatIn_CheckedChanged(object sender, EventArgs e) { UpdateWhereToEat(); }
+        private void rbTakeOut_CheckedChanged(object sender, EventArgs e) { UpdateWhereToEat(); }
+
+        private void btnResetForm_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
     }
-}
+    }
