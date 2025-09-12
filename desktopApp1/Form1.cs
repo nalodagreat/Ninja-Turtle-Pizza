@@ -119,11 +119,30 @@ namespace desktopApp1
                 return;
             }
         }
-        float GetSelectedSizePrice()
-        { return 0; }
+        float GetSelectedSizePrice() { 
+            if (rbSamll.Checked)
+                return Convert.ToSingle(rbSamll.Tag);
+            else if (rbMedium.Checked) 
+                return Convert.ToSingle(rbMedium.Tag);
+            else
+                return Convert.ToSingle(rbLarge.Tag); 
+        }
         float CalculateToppingsPrice()
-        { return 0; }
-        float CalculateTotalPrice()
+        {
+            float ToppingsTotalPrice = 0;
+            if (chkExtraChees.Checked)
+            {
+                ToppingsTotalPrice += Convert.ToSingle(chkExtraChees.Tag);
+            }
+            if (chkOnion.Checked) { ToppingsTotalPrice += Convert.ToSingle(chkOnion.Tag); }
+            if (chkMushrooms.Checked) { ToppingsTotalPrice += Convert.ToSingle(chkMushrooms.Tag); }
+            if (chkOlives.Checked) { ToppingsTotalPrice += Convert.ToSingle(chkOlives.Tag); }
+            if (chkTomatos.Checked) { ToppingsTotalPrice += Convert.ToSingle(chkTomatos.Tag); }
+            if (chkGreenPeppers.Checked) { ToppingsTotalPrice += Convert.ToSingle(chkTomatos.Tag); }
+            return ToppingsTotalPrice;
+        }
+
+            float CalculateTotalPrice()
         {
             return GetSelectedSizePrice() + CalculateToppingsPrice() + GetSelectedCrutPrice();
         }
