@@ -170,7 +170,7 @@ namespace desktopApp1
             btnOrderPizza.Enabled = true;
         }
 
-    
+
         private void btnOrderPizza_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do You Want To Complete This Mission?", "Complete?",
@@ -213,5 +213,12 @@ namespace desktopApp1
         {
             ResetForm();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            UpdateOrderSummary();
+            this.BackgroundImage = Image.FromFile(@"C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\which-pizza-toppings-do-you-think-each-of-the-turtles-would-v0-pwnipxsez97c1.jpg");
+        }
+
     }
-    }
+}
