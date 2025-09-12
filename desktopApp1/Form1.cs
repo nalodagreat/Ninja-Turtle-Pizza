@@ -10,10 +10,6 @@ namespace desktopApp1
         {
             InitializeComponent();
         }
-        void UpdateTotalPrice()
-        {
-            //update price will be here
-        }
         void UpdateSize()
         {
             UpdateTotalPrice();
@@ -106,5 +102,73 @@ namespace desktopApp1
                 return Convert.ToSingle(rbThickCrust.Tag);
         }
 
-    } 
+
+        void UpdateWhereToEat()
+        {
+            UpdateTotalPrice();
+
+            if (rbEatIn.Checked)
+            {
+                lblWhereToEat.Text = "Eat In.";
+                return;
+            }
+
+            if (rbTakeOut.Checked)
+            {
+                lblWhereToEat.Text = "Take Out.";
+                return;
+            }
+        }
+       float GetSelectedSizePrice()
+        { return 0; }
+        float CalculateToppingsPrice()
+        { return 0; }
+        float CalculateTotalPrice()
+        {
+            return GetSelectedSizePrice() + CalculateToppingsPrice() + GetSelectedCrutPrice();
+        }
+
+        void UpdateTotalPrice()
+        {
+            lblTotalPrice.Text = "$" + CalculateTotalPrice().ToString();
+        }
+        void UpdateOrderSummary()
+        {
+            UpdateSize();
+            UpdateToppings();
+            UpdateCrust();
+            UpdateWhereToEat();
+            UpdateTotalPrice();
+        }
+
+        void ResetForm()
+        {
+            // Reset Groups
+            gbSize.Enabled = true;
+            gbToppings.Enabled = true;
+            gbCrustType.Enabled = true;
+            gbWhereToEat.Enabled = true;
+
+            // Reset Size
+            rbMedium.Checked = true;
+
+            // Reset Toppings
+            chkExtraChees.Checked = false;
+            chkOnion.Checked = false;
+            chkMushrooms.Checked = false;
+            chkOlives.Checked = false;
+            chkTomatos.Checked = false;
+            chkGreenPeppers.Checked = false;
+
+            // Reset Crust Type
+            rbThinCrust.Checked = true;
+
+            // Reset Where to Eat
+            rbEatIn.Checked = true;
+
+            // Reset Order Button
+            btnOrderPizza.Enabled = true;
+        }
+
+    }
 }
