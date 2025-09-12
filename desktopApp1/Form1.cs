@@ -82,5 +82,29 @@ namespace desktopApp1
 
             lblToppings.Text = sToppings;
         }
-    }
+        void UpdateCrust()
+        {
+            UpdateTotalPrice();
+            if (rbThinCrust.Checked)
+            {
+                lblCrustType.Text = "Thin Crust";
+                return;
+            }
+
+            if (rbThickCrust.Checked)
+            {
+                lblCrustType.Text = "Thick Crust";
+                return;
+            }
+        }
+
+        float GetSelectedCrutPrice()
+        {
+            if (rbThinCrust.Checked)
+                return Convert.ToSingle(rbThinCrust.Tag);
+            else
+                return Convert.ToSingle(rbThickCrust.Tag);
+        }
+
+    } 
 }
