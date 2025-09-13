@@ -1,4 +1,5 @@
-﻿using System;
+﻿using desktopApp1.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -236,8 +237,9 @@ namespace desktopApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateOrderSummary();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\pc\Downloads\c#\desktopApp1\desktopApp1\which-pizza-toppings-do-you-think-each-of-the-turtles-would-v0-pwnipxsez97c1.jpg");
+            this.BackgroundImage = Resources.which_pizza_toppings_do_you_think_each_of_the_turtles_would_v0_pwnipxsez97c1;
         }
+
 
     }
 }
